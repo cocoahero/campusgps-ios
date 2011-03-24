@@ -12,7 +12,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		4E2BBAC2133BDBB700730DE2 /* CGPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */; };
-		4E2BBACD133BDC1A00730DE2 /* CGPSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC4133BDC1A00730DE2 /* CGPSMapViewController.xib */; };
 		4E2BBACE133BDC1A00730DE2 /* CGPSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */; };
 		4E2BBACF133BDC1A00730DE2 /* CGPSUniversitySelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC8133BDC1A00730DE2 /* CGPSUniversitySelectionController.m */; };
 		4E2BBAD0133BDC1A00730DE2 /* CGPSUniversitySelectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC9133BDC1A00730DE2 /* CGPSUniversitySelectionController.xib */; };
@@ -21,6 +20,10 @@
 		4E2BBB96133BDC9000730DE2 /* NSArray+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBB52133BDC9000730DE2 /* NSArray+Each.m */; };
 		4E2BBB97133BDC9000730DE2 /* NSDictionary+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBB55133BDC9000730DE2 /* NSDictionary+Each.m */; };
 		4E2BBB98133BDC9000730DE2 /* NSObject+Say.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBB58133BDC9000730DE2 /* NSObject+Say.m */; };
+		4E2BBBBB133BDE5F00730DE2 /* bg-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBBB9133BDE5F00730DE2 /* bg-image.jpg */; };
+		4E2BBBBC133BDE5F00730DE2 /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBBBA133BDE5F00730DE2 /* map-icon.png */; };
+		4E2BBBEF133BE0BA00730DE2 /* CGPSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBBEE133BE0BA00730DE2 /* CGPSMapViewController.xib */; };
+		4E2BBC01133BE19D00730DE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC00133BE19D00730DE2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +35,6 @@
 		32CA4F630368D1EE00C91783 /* CampusGPS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusGPS_Prefix.pch; sourceTree = "<group>"; };
 		4E2BBAC0133BDBB700730DE2 /* CGPSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSAppDelegate.h; sourceTree = "<group>"; };
 		4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSAppDelegate.m; sourceTree = "<group>"; };
-		4E2BBAC4133BDC1A00730DE2 /* CGPSMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSMapViewController.xib; sourceTree = "<group>"; };
 		4E2BBAC5133BDC1A00730DE2 /* CGPSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSMapViewController.h; sourceTree = "<group>"; };
 		4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSMapViewController.m; sourceTree = "<group>"; };
 		4E2BBAC7133BDC1A00730DE2 /* CGPSUniversitySelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSUniversitySelectionController.h; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		4E2BBB58133BDC9000730DE2 /* NSObject+Say.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Say.m"; sourceTree = "<group>"; };
 		4E2BBB5A133BDC9000730DE2 /* CHMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMacros.h; sourceTree = "<group>"; };
 		4E2BBB5B133BDC9000730DE2 /* CHSingletonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSingletonMacro.h; sourceTree = "<group>"; };
+		4E2BBBB9133BDE5F00730DE2 /* bg-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-image.jpg"; sourceTree = "<group>"; };
+		4E2BBBBA133BDE5F00730DE2 /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon.png"; sourceTree = "<group>"; };
+		4E2BBBEE133BE0BA00730DE2 /* CGPSMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSMapViewController.xib; sourceTree = "<group>"; };
+		4E2BBC00133BE19D00730DE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* CampusGPS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampusGPS-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +68,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				4E2BBC01133BE19D00730DE2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BBBB8133BDE4800730DE2 /* Images */,
 				8D1107310486CEB800E47090 /* CampusGPS-Info.plist */,
 			);
 			name = Resources;
@@ -121,6 +129,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				4E2BBC00133BE19D00730DE2 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,15 +146,9 @@
 		4E2BBAC3133BDBE500730DE2 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				4E2BBAC4133BDC1A00730DE2 /* CGPSMapViewController.xib */,
-				4E2BBAC5133BDC1A00730DE2 /* CGPSMapViewController.h */,
-				4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */,
-				4E2BBAC7133BDC1A00730DE2 /* CGPSUniversitySelectionController.h */,
-				4E2BBAC8133BDC1A00730DE2 /* CGPSUniversitySelectionController.m */,
-				4E2BBAC9133BDC1A00730DE2 /* CGPSUniversitySelectionController.xib */,
-				4E2BBACA133BDC1A00730DE2 /* CGPSWelcomeViewController.h */,
-				4E2BBACB133BDC1A00730DE2 /* CGPSWelcomeViewController.m */,
-				4E2BBACC133BDC1A00730DE2 /* CGPSWelcomeViewController.xib */,
+				4E2BBBAD133BDDFA00730DE2 /* Welcome View */,
+				4E2BBBAC133BDDEC00730DE2 /* University Selection */,
+				4E2BBBAB133BDDDD00730DE2 /* Map View */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -215,6 +218,45 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		4E2BBBAB133BDDDD00730DE2 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBAC5133BDC1A00730DE2 /* CGPSMapViewController.h */,
+				4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */,
+				4E2BBBEE133BE0BA00730DE2 /* CGPSMapViewController.xib */,
+			);
+			name = "Map View";
+			sourceTree = "<group>";
+		};
+		4E2BBBAC133BDDEC00730DE2 /* University Selection */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBAC7133BDC1A00730DE2 /* CGPSUniversitySelectionController.h */,
+				4E2BBAC8133BDC1A00730DE2 /* CGPSUniversitySelectionController.m */,
+				4E2BBAC9133BDC1A00730DE2 /* CGPSUniversitySelectionController.xib */,
+			);
+			name = "University Selection";
+			sourceTree = "<group>";
+		};
+		4E2BBBAD133BDDFA00730DE2 /* Welcome View */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBACA133BDC1A00730DE2 /* CGPSWelcomeViewController.h */,
+				4E2BBACB133BDC1A00730DE2 /* CGPSWelcomeViewController.m */,
+				4E2BBACC133BDC1A00730DE2 /* CGPSWelcomeViewController.xib */,
+			);
+			name = "Welcome View";
+			sourceTree = "<group>";
+		};
+		4E2BBBB8133BDE4800730DE2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBBB9133BDE5F00730DE2 /* bg-image.jpg */,
+				4E2BBBBA133BDE5F00730DE2 /* map-icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,9 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2BBACD133BDC1A00730DE2 /* CGPSMapViewController.xib in Resources */,
 				4E2BBAD0133BDC1A00730DE2 /* CGPSUniversitySelectionController.xib in Resources */,
 				4E2BBAD2133BDC1A00730DE2 /* CGPSWelcomeViewController.xib in Resources */,
+				4E2BBBBB133BDE5F00730DE2 /* bg-image.jpg in Resources */,
+				4E2BBBBC133BDE5F00730DE2 /* map-icon.png in Resources */,
+				4E2BBBEF133BE0BA00730DE2 /* CGPSMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +349,7 @@
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
 				PRODUCT_NAME = CampusGPS;
+				SEPARATE_STRIP = YES;
 			};
 			name = Debug;
 		};
@@ -317,6 +362,7 @@
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
 				PRODUCT_NAME = CampusGPS;
+				SEPARATE_STRIP = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -327,6 +373,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
@@ -340,6 +387,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
