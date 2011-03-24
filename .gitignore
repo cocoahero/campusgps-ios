@@ -1,0 +1,17 @@
+# Build Products
+build
+
+# Temp Files
+*~.nib
+*.swp
+
+# Mac OS X System Files
+.DS_Store
+
+# User-Specific XCode Files
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspectivev3
+*.xcworkspace
+xcuserdata
