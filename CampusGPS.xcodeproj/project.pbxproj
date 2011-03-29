@@ -11,6 +11,11 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		4E137FEE1340CB1500349F65 /* CGPSCampusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E137FEC1340CB1500349F65 /* CGPSCampusDetailViewController.m */; };
+		4E137FEF1340CB1500349F65 /* CGPSCampusDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E137FED1340CB1500349F65 /* CGPSCampusDetailViewController.xib */; };
+		4E1380861340DC5C00349F65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1380851340DC5C00349F65 /* CoreLocation.framework */; };
+		4E1381F513412C4B00349F65 /* CGPSNewLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1381F313412C4B00349F65 /* CGPSNewLocationViewController.m */; };
+		4E1381F613412C4B00349F65 /* CGPSNewLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1381F413412C4B00349F65 /* CGPSNewLocationViewController.xib */; };
 		4E2BBAC2133BDBB700730DE2 /* CGPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */; };
 		4E2BBACE133BDC1A00730DE2 /* CGPSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */; };
 		4E2BBACF133BDC1A00730DE2 /* CGPSUniversitySelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC8133BDC1A00730DE2 /* CGPSUniversitySelectionController.m */; };
@@ -24,7 +29,86 @@
 		4E2BBBBC133BDE5F00730DE2 /* map-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBBBA133BDE5F00730DE2 /* map-icon.png */; };
 		4E2BBBEF133BE0BA00730DE2 /* CGPSMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BBBEE133BE0BA00730DE2 /* CGPSMapViewController.xib */; };
 		4E2BBC01133BE19D00730DE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC00133BE19D00730DE2 /* MapKit.framework */; };
+		4E2BBC3F133BE36E00730DE2 /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC36133BE35B00730DE2 /* libRestKitJSONParserYAJL.a */; };
+		4E2BBC40133BE37000730DE2 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC30133BE35B00730DE2 /* libRestKitNetwork.a */; };
+		4E2BBC41133BE37200730DE2 /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC32133BE35B00730DE2 /* libRestKitObjectMapping.a */; };
+		4E2BBC42133BE37200730DE2 /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC34133BE35B00730DE2 /* libRestKitSupport.a */; };
+		4E2BBC48133BE3BA00730DE2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC47133BE3BA00730DE2 /* CFNetwork.framework */; };
+		4E2BBC4A133BE3BA00730DE2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC49133BE3BA00730DE2 /* MobileCoreServices.framework */; };
+		4E2BBC4C133BE3BA00730DE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC4B133BE3BA00730DE2 /* SystemConfiguration.framework */; };
+		4E2BBC54133BE3C900730DE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC53133BE3C900730DE2 /* CoreData.framework */; };
+		4E2BBCB2133BE53900730DE2 /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC3A133BE35B00730DE2 /* libRestKitCoreData.a */; };
+		4E2BBD00133BE91200730DE2 /* CGPSCampus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBCFF133BE91200730DE2 /* CGPSCampus.m */; };
+		4E2BBD03133C26A300730DE2 /* CGPSAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBD02133C26A300730DE2 /* CGPSAPIController.m */; };
+		4EA28FDF133D024600E82A5E /* CGPSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA28FDE133D024600E82A5E /* CGPSLocation.m */; };
+		4EBB0771133E8A8500B7A119 /* CampusGPS.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB0770133E8A8500B7A119 /* CampusGPS.xcdatamodel */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E2BBC2F133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A07FC1255161B00976E89;
+			remoteInfo = RestKitNetwork;
+		};
+		4E2BBC31133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A08031255162C00976E89;
+			remoteInfo = RestKitObjectMapping;
+		};
+		4E2BBC33133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A080C12551D3000976E89;
+			remoteInfo = RestKitSupport;
+		};
+		4E2BBC35133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E64F125231F600531FA8;
+			remoteInfo = "RestKitJSONParser+YAJL";
+		};
+		4E2BBC37133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E66B1252353700531FA8;
+			remoteInfo = "RestKitJSONParser+SBJSON";
+		};
+		4E2BBC39133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A081412551D5300976E89;
+			remoteInfo = RestKitCoreData;
+		};
+		4E2BBC3B133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2523360511E79F090048F9B4;
+			remoteInfo = RestKitThree20;
+		};
+		4E2BBC3D133BE35B00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6C39A510FE5C95008F47C5;
+			remoteInfo = UISpec;
+		};
+		4E2BBC93133BE3EE00730DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25956956126DF0A8004BAC4C;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +117,13 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CampusGPS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusGPS_Prefix.pch; sourceTree = "<group>"; };
+		4E137FEB1340CB1500349F65 /* CGPSCampusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSCampusDetailViewController.h; sourceTree = "<group>"; };
+		4E137FEC1340CB1500349F65 /* CGPSCampusDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSCampusDetailViewController.m; sourceTree = "<group>"; };
+		4E137FED1340CB1500349F65 /* CGPSCampusDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSCampusDetailViewController.xib; sourceTree = "<group>"; };
+		4E1380851340DC5C00349F65 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4E1381F213412C4B00349F65 /* CGPSNewLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSNewLocationViewController.h; sourceTree = "<group>"; };
+		4E1381F313412C4B00349F65 /* CGPSNewLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSNewLocationViewController.m; sourceTree = "<group>"; };
+		4E1381F413412C4B00349F65 /* CGPSNewLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSNewLocationViewController.xib; sourceTree = "<group>"; };
 		4E2BBAC0133BDBB700730DE2 /* CGPSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSAppDelegate.h; sourceTree = "<group>"; };
 		4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSAppDelegate.m; sourceTree = "<group>"; };
 		4E2BBAC5133BDC1A00730DE2 /* CGPSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSMapViewController.h; sourceTree = "<group>"; };
@@ -57,6 +148,18 @@
 		4E2BBBBA133BDE5F00730DE2 /* map-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-icon.png"; sourceTree = "<group>"; };
 		4E2BBBEE133BE0BA00730DE2 /* CGPSMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSMapViewController.xib; sourceTree = "<group>"; };
 		4E2BBC00133BE19D00730DE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		4E2BBC47133BE3BA00730DE2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4E2BBC49133BE3BA00730DE2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4E2BBC4B133BE3BA00730DE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E2BBC53133BE3C900730DE2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4E2BBCFE133BE91200730DE2 /* CGPSCampus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSCampus.h; sourceTree = "<group>"; };
+		4E2BBCFF133BE91200730DE2 /* CGPSCampus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSCampus.m; sourceTree = "<group>"; };
+		4E2BBD01133C26A300730DE2 /* CGPSAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSAPIController.h; sourceTree = "<group>"; };
+		4E2BBD02133C26A300730DE2 /* CGPSAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSAPIController.m; sourceTree = "<group>"; };
+		4EA28FDD133D024600E82A5E /* CGPSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSLocation.h; sourceTree = "<group>"; };
+		4EA28FDE133D024600E82A5E /* CGPSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSLocation.m; sourceTree = "<group>"; };
+		4EBB0770133E8A8500B7A119 /* CampusGPS.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = CampusGPS.xcdatamodel; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampusGPS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampusGPS-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +172,16 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				4E2BBC01133BE19D00730DE2 /* MapKit.framework in Frameworks */,
+				4E2BBC3F133BE36E00730DE2 /* libRestKitJSONParserYAJL.a in Frameworks */,
+				4E2BBC40133BE37000730DE2 /* libRestKitNetwork.a in Frameworks */,
+				4E2BBC41133BE37200730DE2 /* libRestKitObjectMapping.a in Frameworks */,
+				4E2BBC42133BE37200730DE2 /* libRestKitSupport.a in Frameworks */,
+				4E2BBC48133BE3BA00730DE2 /* CFNetwork.framework in Frameworks */,
+				4E2BBC4A133BE3BA00730DE2 /* MobileCoreServices.framework in Frameworks */,
+				4E2BBC4C133BE3BA00730DE2 /* SystemConfiguration.framework in Frameworks */,
+				4E2BBC54133BE3C900730DE2 /* CoreData.framework in Frameworks */,
+				4E2BBCB2133BE53900730DE2 /* libRestKitCoreData.a in Frameworks */,
+				4E1380861340DC5C00349F65 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +191,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BBCFD133BE8FC00730DE2 /* API Interface */,
 				4E2BBABF133BDBA100730DE2 /* Application Delegate */,
 				4E2BBAC3133BDBE500730DE2 /* User Interface */,
 				4E2BBAD3133BDC4600730DE2 /* Support Files */,
@@ -119,6 +233,7 @@
 			children = (
 				4E2BBBB8133BDE4800730DE2 /* Images */,
 				8D1107310486CEB800E47090 /* CampusGPS-Info.plist */,
+				4EBB0770133E8A8500B7A119 /* CampusGPS.xcdatamodel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -126,12 +241,37 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BBC47133BE3BA00730DE2 /* CFNetwork.framework */,
+				4E2BBC49133BE3BA00730DE2 /* MobileCoreServices.framework */,
+				4E2BBC4B133BE3BA00730DE2 /* SystemConfiguration.framework */,
+				4E2BBC53133BE3C900730DE2 /* CoreData.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				4E2BBC00133BE19D00730DE2 /* MapKit.framework */,
+				4E1380851340DC5C00349F65 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E137FEA1340CAFC00349F65 /* Campus Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				4E137FEB1340CB1500349F65 /* CGPSCampusDetailViewController.h */,
+				4E137FEC1340CB1500349F65 /* CGPSCampusDetailViewController.m */,
+				4E137FED1340CB1500349F65 /* CGPSCampusDetailViewController.xib */,
+			);
+			name = "Campus Detail View";
+			sourceTree = "<group>";
+		};
+		4E1381F113412C3000349F65 /* New Location View */ = {
+			isa = PBXGroup;
+			children = (
+				4E1381F213412C4B00349F65 /* CGPSNewLocationViewController.h */,
+				4E1381F313412C4B00349F65 /* CGPSNewLocationViewController.m */,
+				4E1381F413412C4B00349F65 /* CGPSNewLocationViewController.xib */,
+			);
+			name = "New Location View";
 			sourceTree = "<group>";
 		};
 		4E2BBABF133BDBA100730DE2 /* Application Delegate */ = {
@@ -148,7 +288,9 @@
 			children = (
 				4E2BBBAD133BDDFA00730DE2 /* Welcome View */,
 				4E2BBBAC133BDDEC00730DE2 /* University Selection */,
+				4E137FEA1340CAFC00349F65 /* Campus Detail View */,
 				4E2BBBAB133BDDDD00730DE2 /* Map View */,
+				4E1381F113412C3000349F65 /* New Location View */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -156,6 +298,7 @@
 		4E2BBAD3133BDC4600730DE2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */,
 				4E2BBAE6133BDC9000730DE2 /* cocoahero-common-library */,
 			);
 			name = "Support Files";
@@ -257,6 +400,34 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		4E2BBC1A133BE35B00730DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBC30133BE35B00730DE2 /* libRestKitNetwork.a */,
+				4E2BBC32133BE35B00730DE2 /* libRestKitObjectMapping.a */,
+				4E2BBC34133BE35B00730DE2 /* libRestKitSupport.a */,
+				4E2BBC36133BE35B00730DE2 /* libRestKitJSONParserYAJL.a */,
+				4E2BBC38133BE35B00730DE2 /* libRestKitJSONParserSBJSON.a */,
+				4E2BBC3A133BE35B00730DE2 /* libRestKitCoreData.a */,
+				4E2BBC3C133BE35B00730DE2 /* libRestKitThree20.a */,
+				4E2BBC3E133BE35B00730DE2 /* UISpec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E2BBCFD133BE8FC00730DE2 /* API Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BBD01133C26A300730DE2 /* CGPSAPIController.h */,
+				4E2BBD02133C26A300730DE2 /* CGPSAPIController.m */,
+				4E2BBCFE133BE91200730DE2 /* CGPSCampus.h */,
+				4E2BBCFF133BE91200730DE2 /* CGPSCampus.m */,
+				4EA28FDD133D024600E82A5E /* CGPSLocation.h */,
+				4EA28FDE133D024600E82A5E /* CGPSLocation.m */,
+			);
+			name = "API Interface";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +442,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4E2BBC94133BE3EE00730DE2 /* PBXTargetDependency */,
 			);
 			name = CampusGPS;
 			productName = CampusGPS;
@@ -297,12 +469,77 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4E2BBC1A133BE35B00730DE2 /* Products */;
+					ProjectRef = 4E2BBC19133BE35B00730DE2 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* CampusGPS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4E2BBC30133BE35B00730DE2 /* libRestKitNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitNetwork.a;
+			remoteRef = 4E2BBC2F133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC32133BE35B00730DE2 /* libRestKitObjectMapping.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitObjectMapping.a;
+			remoteRef = 4E2BBC31133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC34133BE35B00730DE2 /* libRestKitSupport.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitSupport.a;
+			remoteRef = 4E2BBC33133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC36133BE35B00730DE2 /* libRestKitJSONParserYAJL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserYAJL.a;
+			remoteRef = 4E2BBC35133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC38133BE35B00730DE2 /* libRestKitJSONParserSBJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserSBJSON.a;
+			remoteRef = 4E2BBC37133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC3A133BE35B00730DE2 /* libRestKitCoreData.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitCoreData.a;
+			remoteRef = 4E2BBC39133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC3C133BE35B00730DE2 /* libRestKitThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitThree20.a;
+			remoteRef = 4E2BBC3B133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E2BBC3E133BE35B00730DE2 /* UISpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UISpec.app;
+			remoteRef = 4E2BBC3D133BE35B00730DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -314,6 +551,8 @@
 				4E2BBBBB133BDE5F00730DE2 /* bg-image.jpg in Resources */,
 				4E2BBBBC133BDE5F00730DE2 /* map-icon.png in Resources */,
 				4E2BBBEF133BE0BA00730DE2 /* CGPSMapViewController.xib in Resources */,
+				4E137FEF1340CB1500349F65 /* CGPSCampusDetailViewController.xib in Resources */,
+				4E1381F613412C4B00349F65 /* CGPSNewLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +571,24 @@
 				4E2BBB96133BDC9000730DE2 /* NSArray+Each.m in Sources */,
 				4E2BBB97133BDC9000730DE2 /* NSDictionary+Each.m in Sources */,
 				4E2BBB98133BDC9000730DE2 /* NSObject+Say.m in Sources */,
+				4E2BBD00133BE91200730DE2 /* CGPSCampus.m in Sources */,
+				4E2BBD03133C26A300730DE2 /* CGPSAPIController.m in Sources */,
+				4EA28FDF133D024600E82A5E /* CGPSLocation.m in Sources */,
+				4EBB0771133E8A8500B7A119 /* CampusGPS.xcdatamodel in Sources */,
+				4E137FEE1340CB1500349F65 /* CGPSCampusDetailViewController.m in Sources */,
+				4E1381F513412C4B00349F65 /* CGPSNewLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E2BBC94133BE3EE00730DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 4E2BBC93133BE3EE00730DE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -347,7 +600,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
+				HEADER_SEARCH_PATHS = RestKit/Build;
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = CampusGPS;
 				SEPARATE_STRIP = YES;
 			};
@@ -360,7 +618,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
+				HEADER_SEARCH_PATHS = RestKit/Build;
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = CampusGPS;
 				SEPARATE_STRIP = YES;
 				VALIDATE_PRODUCT = YES;

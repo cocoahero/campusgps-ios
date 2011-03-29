@@ -8,7 +8,7 @@
 
 #import "CGPSWelcomeViewController.h"
 #import "CGPSUniversitySelectionController.h"
-#import "CGPSMapViewController.h"
+#import "CGPSCampusDetailViewController.h"
 
 @implementation CGPSWelcomeViewController
 
@@ -54,12 +54,12 @@
 
 #pragma mark - CGPSUniversitySelectionViewControllerDelegate Protocol Methods
 
-- (void)universitySelectionController:(CGPSUniversitySelectionController *)controller didDismissWithSelection:(id)selectedObject {
-	CGPSMapViewController * mapVC = [[CGPSMapViewController alloc] init];
+- (void)universitySelectionController:(CGPSUniversitySelectionController *)controller didDismissWithSelection:(CGPSCampus *)selectedCampus {
+	CGPSCampusDetailViewController * detailVC = [[CGPSCampusDetailViewController alloc] initWithCampus:selectedCampus];
 	
-	[[self navigationController] pushViewController:mapVC animated:YES];
+	[[self navigationController] pushViewController:detailVC animated:YES];
 	
-	[mapVC release];
+	[detailVC release];
 }
 
 #pragma mark - Memory Management
