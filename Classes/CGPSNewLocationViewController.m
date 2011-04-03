@@ -7,7 +7,7 @@
 //
 
 #import "CGPSNewLocationViewController.h"
-
+#import "CGPSAPIController.h"
 
 @implementation CGPSNewLocationViewController
 
@@ -46,35 +46,33 @@
 }
 
 - (IBAction)done:(id)sender {
-	CGPSLocation * newLocation = [CGPSLocation object];
-	
-	newLocation.campusID = [[self campus] campusID];
-	
-	newLocation.locationName = [[self locationNameField] text];
-	newLocation.locationDescription = [[self locationDescriptionField] text];
-	
 	CLLocationCoordinate2D userCoord = [_userLocation coordinate];
 	
-	newLocation.locationLatitude = [NSNumber numberWithDouble:userCoord.latitude];
-	newLocation.locationLongitude = [NSNumber numberWithDouble:userCoord.longitude];
-	
-	//[newLocation setCampus:[self campus]];
-			
-	[[RKObjectManager sharedManager] postObject:newLocation delegate:self];
-	
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-- (void)objectLoaderDidLoadUnexpectedResponse:(RKObjectLoader *)objectLoader {
-	NSLog(@"SOMETHING HAPPENED UNEXPECTEDLY!");
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
-	NSLog(@"MY ERROR: %@", error);
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
-	NSLog(@"LOADED %d OBJECTS", [objects count]);
+	if (CLLocationCoordinate2DIsValid(userCoord)) {
+		CGPSLocation * newLocation = [CGPSLocation location];
+		
+		newLocation.campusID = [[self campus] campusID];
+		
+		newLocation.locationName = [[self locationNameField] text];
+		newLocation.locationDescription = [[self locationDescriptionField] text];
+		
+		newLocation.locationLatitude = [NSNumber numberWithDouble:userCoord.latitude];
+		newLocation.locationLongitude = [NSNumber numberWithDouble:userCoord.longitude];
+		
+		[[CGPSAPIController sharedAPIController] saveObject:newLocation];
+		
+		[self dismissModalViewControllerAnimated:YES];
+	}
+	else {
+		UIAlertView * alert = [[UIAlertView alloc] init];
+		
+		alert.title   = @"Where are you??";
+		alert.message = @"CampusGPS is unable to get a valid fix on your current location.\n\nThis may be because you are inside a building or you are not allowing CampusGPS to use your current location.";
+		[alert addButtonWithTitle:@"Okay"];
+		
+		[alert show];
+		[alert release];
+	}	
 }
 
 #pragma mark - Memory Management

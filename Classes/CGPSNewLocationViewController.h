@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData/CoreData.h>
 #import "CGPSCampus.h"
 #import "CGPSLocation.h"
 
-@interface CGPSNewLocationViewController : UIViewController <RKObjectLoaderDelegate> {
+@interface CGPSNewLocationViewController : UIViewController {
 	@private
 	UINavigationBar * _navigationBar;
 	

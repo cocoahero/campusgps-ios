@@ -90,20 +90,7 @@
 #pragma mark - Properties
 
 - (NSArray *)campuses {
-	if (_campuses != nil) {
-		return _campuses;
-	}
-	
-	NSFetchRequest * fetchRequest = [CGPSCampus fetchRequest];
-	
-	NSSortDescriptor * descriptor = [NSSortDescriptor sortDescriptorWithKey:@"campusName" ascending:YES];
-	
-	[fetchRequest setSortDescriptors:[NSArray arrayWithObject:descriptor]];
-	[fetchRequest setPredicate:[self searchPredicate]];
-	
-	_campuses = [[CGPSCampus objectsWithFetchRequest:fetchRequest] retain];
-	
-	return _campuses;
+	return [[[CGPSAPIController sharedAPIController] campuses] filteredArrayUsingPredicate:[self searchPredicate]];
 }
 
 #pragma mark - Memory Management

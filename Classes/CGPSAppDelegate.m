@@ -6,9 +6,6 @@
 //  Copyright 2011 Jonathan Baker. All rights reserved.
 //
 
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData/CoreData.h>
-
 #import "CGPSAppDelegate.h"
 #import "CGPSAPIController.h"
 #import "CGPSCampus.h"
@@ -17,7 +14,7 @@
 
 @interface CGPSAppDelegate (Private)
 - (void)initMainWindow;
-- (void)initRestKit;
+- (void)configureAPIController;
 - (void)buildViewHierarchy;
 @end
 
@@ -29,14 +26,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self initMainWindow];
-	[self initRestKit];
+	[self configureAPIController];
 	[self buildViewHierarchy];
 	
 	[[self mainWindow] makeKeyAndVisible];
 	
-	[[CGPSAPIController sharedAPIController] loadCampuses];
-	
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+	[[CGPSAPIController sharedAPIController] reloadData];
 }
 
 #pragma mark - CGPSAppDelegate (Private) Methods
@@ -49,23 +48,8 @@
 	[aWindow release];
 }
 
-- (void)initRestKit {
-	RKObjectManager * objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000"];
-	
-	[objectManager setObjectStore:[[[RKManagedObjectStore alloc] initWithStoreFilename:@"CampusGPS.sqlite"] autorelease]];
-	
-	[[objectManager mapper] setMissingElementMappingPolicy:RKSetNilForMissingElementMappingPolicy];
-	
-	[[objectManager mapper] registerClass:[CGPSCampus class] forElementNamed:@"campus"];
-	[[objectManager mapper] registerClass:[CGPSLocation class] forElementNamed:@"location"];
-	[[objectManager mapper] registerClass:[CGPSLocation class] forElementNamed:@"locations"];
-	
-	RKDynamicRouter * router = (RKDynamicRouter *)[objectManager router];
-	
-	[router routeClass:[CGPSCampus class] toResourcePath:@"/campuses/(campusID)"];
-	[router routeClass:[CGPSCampus class] toResourcePath:@"/campuses" forMethod:RKRequestMethodPOST];
-	[router routeClass:[CGPSLocation class] toResourcePath:@"/campuses/(campusID)/locations/(locationID)"];
-	[router routeClass:[CGPSLocation class] toResourcePath:@"/campuses/(campusID)/locations" forMethod:RKRequestMethodPOST];
+- (void)configureAPIController {
+	[[CGPSAPIController sharedAPIController] setBaseResourcePath:@"http://campusgps.heroku.com"];
 }
 
 - (void)buildViewHierarchy {

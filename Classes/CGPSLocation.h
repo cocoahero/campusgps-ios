@@ -7,18 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData/CoreData.h>
 #import "CGPSCampus.h"
 
-@interface CGPSLocation : RKManagedObject
+@interface CGPSLocation : NSObject
 
-@property (nonatomic, retain) CGPSCampus * campus;
 @property (nonatomic, retain) NSNumber * locationID;
 @property (nonatomic, retain) NSString * locationName;
 @property (nonatomic, retain) NSString * locationDescription;
 @property (nonatomic, retain) NSNumber * locationLongitude;
 @property (nonatomic, retain) NSNumber * locationLatitude;
 @property (nonatomic, retain) NSNumber * campusID;
+
++ (CGPSLocation *)location;
++ (CGPSLocation *)locationWithDictionary:(NSDictionary *)dictionary;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary *)dictionaryRepresentation;
 
 @end

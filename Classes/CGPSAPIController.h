@@ -7,17 +7,38 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CGPSCampus.h"
+#import "CGPSLocation.h"
 
+typedef enum {
+	CGPSPostRequest = 1,
+	CGPSGetRequest,
+	CGPSPutRequest,
+	CGPSDeleteRequest
+} CGPSRequestMethod;
 
-@interface CGPSAPIController : NSObject <RKObjectLoaderDelegate> {
+@interface CGPSAPIController : NSObject <ASIHTTPRequestDelegate> {
 	@private
-	RKObjectManager * _objectManager;
+	NSOperationQueue * _operationQueue;
+	
+	NSString * _baseResourcePath;
+	
+	NSMutableArray * _campuses;
+	NSMutableArray * _locations;
 }
 
-@property (nonatomic, assign) RKObjectManager * objectManager;
+@property (readonly) NSOperationQueue * operationQueue;
+
+@property (retain) NSString * baseResourcePath;
+
+@property (retain) NSMutableArray * campuses;
+@property (retain) NSMutableArray * locations;
 
 + (CGPSAPIController *)sharedAPIController;
 
-- (void)loadCampuses;
+- (ASIHTTPRequest *)requestForObject:(id)object method:(CGPSRequestMethod)method;
+
+- (void)reloadData;
+- (void)saveObject:(id)object;
 
 @end

@@ -18,6 +18,7 @@
 @synthesize campusNameLabel = _campusNameLabel;
 @synthesize campusInfoButton = _campusInfoButton;
 @synthesize addLocationButton = _addLocationButton;
+@synthesize userLocationToggleButton = _userLocationToggleButton;
 
 @synthesize campus = _campus;
 
@@ -44,10 +45,12 @@
 	[super viewWillAppear:animated];
 	
 	[[self navigationController] setNavigationBarHidden:NO animated:animated];
+	[[self mapView] removeAnnotations:[[self mapView] annotations]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+
 	[self zoomToCampusRegion];
 }
 
@@ -69,7 +72,6 @@
 	
 	pinView.canShowCallout = YES;
 	pinView.animatesDrop = YES;
-	pinView.selected = YES;
 	
 	return pinView;
 }
@@ -82,6 +84,7 @@
 
 - (IBAction)showCurrentLocation {
 	[[self mapView] setShowsUserLocation:![[self mapView] showsUserLocation]];
+	[[self userLocationToggleButton] setTitle:([[self mapView] showsUserLocation]) ? @"Hide Me" : @"Show Me"];
 }
 
 - (IBAction)zoomToCampusRegion {
@@ -116,6 +119,7 @@
 	[_campusNameLabel release];
 	[_campusInfoButton release];
 	[_addLocationButton release];
+	[_userLocationToggleButton release];
 	[_campus release];
 	
     [super dealloc];

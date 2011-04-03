@@ -7,7 +7,8 @@
     #import <UIKit/UIKit.h>
 	#import <MapKit/MapKit.h>
 	#import <CoreLocation/CoreLocation.h>
-	#import <RestKit/RestKit.h>
 
 	#import "CHCommon.h"
+	#import "JSONKit.h"
+	#import "ASIHTTPRequest.h"
 #endif

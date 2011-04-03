@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CGPSAPIController.h"
 #import "CGPSCampus.h"
 
 @class CGPSUniversitySelectionController;

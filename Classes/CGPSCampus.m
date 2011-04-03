@@ -8,34 +8,46 @@
 
 #import "CGPSCampus.h"
 #import "CGPSLocation.h"
+#import "CGPSAPIController.h"
 
 @implementation CGPSCampus
 
-@dynamic campusID;
-@dynamic campusName;
-@dynamic campusDescription;
-@dynamic locations;
+@synthesize campusID;
+@synthesize campusName;
+@synthesize campusDescription;
 
-+ (NSDictionary *)elementToPropertyMappings {
-	return [NSDictionary dictionaryWithKeysAndObjects:
-			@"id", @"campusID",
-			@"name", @"campusName",
-			@"description", @"campusDescription", 
-			nil];
+#pragma mark - CGPSCampus Factory Methods
+
++ (CGPSCampus *)campus {
+	return [[[CGPSCampus alloc] initWithDictionary:nil] autorelease];
 }
 
-+ (NSDictionary *)elementToRelationshipMappings {
-	return [NSDictionary dictionaryWithKeysAndObjects:
-			@"locations", @"locations",
-			nil];
++ (CGPSCampus *)campusWithDictionary:(NSDictionary *)dictionary {
+	return [[[CGPSCampus alloc] initWithDictionary:dictionary] autorelease];
 }
 
-+ (NSString *)primaryKeyProperty {
-	return @"campusID";
+#pragma mark - Initializer
+
+- (id)initWithDictionary:(NSDictionary *)dictionary {
+	if ((self = [super init])) {
+		if (dictionary != nil) {
+			self.campusID = [dictionary objectForKey:@"id"];
+			self.campusName = [dictionary objectForKey:@"name"];
+			self.campusDescription = [dictionary objectForKey:@"description"];
+		}
+	}
+	return self;
 }
+
+#pragma mark - CGPSCampus Instance Methods
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"%@ (%d)", [self campusName], [[self campusID] intValue]];
+	return [NSString stringWithFormat:@"%@", [self campusName]];
+}
+
+- (NSArray *)locations {
+	NSPredicate * predicate = [NSPredicate predicateWithFormat:@"campusID == %d", [[self campusID] intValue]];
+	return [[[CGPSAPIController sharedAPIController] locations] filteredArrayUsingPredicate:predicate];
 }
 
 - (MKCoordinateRegion)campusRegion {
@@ -46,7 +58,7 @@
 	int locationCount = 0;
 	
 	for (CGPSLocation * location in [self locations]) {
-		//NSLog(@"%f %f", [[location locationLatitude] doubleValue], [[location locationLongitude] doubleValue]);
+		//NSLog(@"%@: %f, %f", [location locationName], [[location locationLatitude] doubleValue], [[location locationLongitude] doubleValue]);
 		locationCount++;
 		
 		if ([[location locationLatitude] doubleValue] < minLat) {
@@ -63,15 +75,15 @@
 		}
 	}
 	
-	NSLog(@"Min Latitude: %f", minLat);
-	NSLog(@"Max Latitude: %f", maxLat);
-	NSLog(@"Min Longitude: %f", minLong);
-	NSLog(@"Max Longitude: %f", maxLong);
+	//NSLog(@"Min Latitude: %f", minLat);
+	//NSLog(@"Max Latitude: %f", maxLat);
+	//NSLog(@"Min Longitude: %f", minLong);
+	//NSLog(@"Max Longitude: %f", maxLong);
 	
 	double centerLat = (locationCount == 1) ? minLat: (((maxLat - minLat) / 2.0) + minLat);
 	double centerLong = (locationCount == 1) ? minLong: (((maxLong - minLong) / 2.0) + minLong);
 	
-	NSLog(@"Center Point: %f, %f", centerLat, centerLong);
+	//NSLog(@"Center Point: %f, %f", centerLat, centerLong);
 	
 	MKCoordinateSpan span = MKCoordinateSpanMake(MAX(fabs(maxLat - minLat), 0.005), MAX(fabs(maxLong - minLong), 0.005));
 	CLLocationCoordinate2D center = CLLocationCoordinate2DMake(centerLat, centerLong);

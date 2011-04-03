@@ -8,17 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData/CoreData.h>
 
-@interface CGPSCampus : RKManagedObject
+@interface CGPSCampus : NSObject 
 
 @property (nonatomic, retain) NSNumber * campusID;
 @property (nonatomic, retain) NSString * campusName;
 @property (nonatomic, retain) NSString * campusDescription;
-@property (nonatomic, retain) NSSet * locations;
 
 // Transient Properties
+- (NSArray *)locations;
 - (MKCoordinateRegion)campusRegion;
+
+// Initializer
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+// Factory Methods
++ (CGPSCampus *)campus;
++ (CGPSCampus *)campusWithDictionary:(NSDictionary *)dictionary;
 
 @end

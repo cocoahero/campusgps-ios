@@ -19,6 +19,7 @@
 	UILabel * _campusNameLabel;
 	UIBarButtonItem * _campusInfoButton;
 	UIBarButtonItem * _addLocationButton;
+	UIBarButtonItem * _userLocationToggleButton;
 	
 	CGPSCampus * _campus;
 }
@@ -29,6 +30,7 @@
 @property (nonatomic, retain) IBOutlet UILabel * campusNameLabel;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * campusInfoButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * addLocationButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem * userLocationToggleButton;
 
 @property (nonatomic, retain) CGPSCampus * campus;
 
