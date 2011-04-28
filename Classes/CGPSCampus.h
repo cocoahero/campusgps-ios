@@ -13,6 +13,8 @@
 
 @property (nonatomic, retain) NSNumber * campusID;
 @property (nonatomic, retain) NSString * campusName;
+@property (nonatomic, retain) NSString * campusLocation;
+@property (nonatomic, retain) NSString * campusWebsite;
 @property (nonatomic, retain) NSString * campusDescription;
 
 // Transient Properties

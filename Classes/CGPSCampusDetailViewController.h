@@ -14,6 +14,7 @@
 	UIBarButtonItem * _mapViewButton;	
 	
 	UILabel * _campusNameLabel;
+	UILabel * _campusLocationLabel;
 	UITextView * _campusDescriptionTextView;
 	
 	CGPSCampus * _campus;
@@ -22,6 +23,7 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * mapViewButton;
 
 @property (nonatomic, retain) IBOutlet UILabel * campusNameLabel;
+@property (nonatomic, retain) IBOutlet UILabel * campusLocationLabel;
 @property (nonatomic, retain) IBOutlet UITextView * campusDescriptionTextView;
 
 @property (nonatomic, retain) CGPSCampus * campus;

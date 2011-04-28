@@ -54,10 +54,10 @@ CHSingleton(CGPSAPIController, sharedAPIController);
 		
 		NSArray * campuses = [[request responseData] objectFromJSONData];
 		[campuses each:^(id object) {
-			NSDictionary * campusDictionary = [object objectForKey:@"campus"];
+			NSDictionary * campusDictionary = (NSDictionary *)[object objectForKey:@"campus"];
 			[[self campuses] addObject:[CGPSCampus campusWithDictionary:campusDictionary]];
 			
-			[[campusDictionary objectForKey:@"locations"] each:^(id object) {
+			[(NSArray *)[campusDictionary objectForKey:@"locations"] each:^(id object) {
 				[[self locations] addObject:[CGPSLocation locationWithDictionary:object]];
 			}];
 		}];

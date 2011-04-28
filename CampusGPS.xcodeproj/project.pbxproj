@@ -27,6 +27,10 @@
 		4E1380861340DC5C00349F65 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1380851340DC5C00349F65 /* CoreLocation.framework */; };
 		4E1381F513412C4B00349F65 /* CGPSNewLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1381F313412C4B00349F65 /* CGPSNewLocationViewController.m */; };
 		4E1381F613412C4B00349F65 /* CGPSNewLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1381F413412C4B00349F65 /* CGPSNewLocationViewController.xib */; };
+		4E1D00C81361CD7B009B20BF /* NSArray+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D00791361CD7B009B20BF /* NSArray+Each.m */; };
+		4E1D00C91361CD7B009B20BF /* NSDictionary+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D007B1361CD7B009B20BF /* NSDictionary+Each.m */; };
+		4E1D00CA1361CD7B009B20BF /* NSObject+Say.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D007D1361CD7B009B20BF /* NSObject+Say.m */; };
+		4E1D00CB1361CD7B009B20BF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D007F1361CD7B009B20BF /* UIColor+Hex.m */; };
 		4E2BBAC2133BDBB700730DE2 /* CGPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */; };
 		4E2BBACE133BDC1A00730DE2 /* CGPSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC6133BDC1A00730DE2 /* CGPSMapViewController.m */; };
 		4E2BBACF133BDC1A00730DE2 /* CGPSUniversitySelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBAC8133BDC1A00730DE2 /* CGPSUniversitySelectionController.m */; };
@@ -43,9 +47,6 @@
 		4E2BBC54133BE3C900730DE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BBC53133BE3C900730DE2 /* CoreData.framework */; };
 		4E2BBD00133BE91200730DE2 /* CGPSCampus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBCFF133BE91200730DE2 /* CGPSCampus.m */; };
 		4E2BBD03133C26A300730DE2 /* CGPSAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BBD02133C26A300730DE2 /* CGPSAPIController.m */; };
-		4E30231313476D2500C73BA3 /* NSArray+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3022DE13476D2500C73BA3 /* NSArray+Each.m */; };
-		4E30231413476D2500C73BA3 /* NSDictionary+Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3022E113476D2500C73BA3 /* NSDictionary+Each.m */; };
-		4E30231513476D2500C73BA3 /* NSObject+Say.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3022E413476D2500C73BA3 /* NSObject+Say.m */; };
 		4EA28FDF133D024600E82A5E /* CGPSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA28FDE133D024600E82A5E /* CGPSLocation.m */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,18 @@
 		4E1381F213412C4B00349F65 /* CGPSNewLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSNewLocationViewController.h; sourceTree = "<group>"; };
 		4E1381F313412C4B00349F65 /* CGPSNewLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSNewLocationViewController.m; sourceTree = "<group>"; };
 		4E1381F413412C4B00349F65 /* CGPSNewLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CGPSNewLocationViewController.xib; sourceTree = "<group>"; };
+		4E1D00711361CD7B009B20BF /* CHCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCommon.h; sourceTree = "<group>"; };
+		4E1D00771361CD7B009B20BF /* CHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHExtensions.h; sourceTree = "<group>"; };
+		4E1D00781361CD7B009B20BF /* NSArray+Each.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Each.h"; sourceTree = "<group>"; };
+		4E1D00791361CD7B009B20BF /* NSArray+Each.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Each.m"; sourceTree = "<group>"; };
+		4E1D007A1361CD7B009B20BF /* NSDictionary+Each.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Each.h"; sourceTree = "<group>"; };
+		4E1D007B1361CD7B009B20BF /* NSDictionary+Each.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Each.m"; sourceTree = "<group>"; };
+		4E1D007C1361CD7B009B20BF /* NSObject+Say.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Say.h"; sourceTree = "<group>"; };
+		4E1D007D1361CD7B009B20BF /* NSObject+Say.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Say.m"; sourceTree = "<group>"; };
+		4E1D007E1361CD7B009B20BF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		4E1D007F1361CD7B009B20BF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		4E1D00811361CD7B009B20BF /* CHMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMacros.h; sourceTree = "<group>"; };
+		4E1D00821361CD7B009B20BF /* CHSingletonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSingletonMacro.h; sourceTree = "<group>"; };
 		4E2BBAC0133BDBB700730DE2 /* CGPSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSAppDelegate.h; sourceTree = "<group>"; };
 		4E2BBAC1133BDBB700730DE2 /* CGPSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSAppDelegate.m; sourceTree = "<group>"; };
 		4E2BBAC5133BDC1A00730DE2 /* CGPSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSMapViewController.h; sourceTree = "<group>"; };
@@ -110,17 +123,6 @@
 		4E2BBCFF133BE91200730DE2 /* CGPSCampus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSCampus.m; sourceTree = "<group>"; };
 		4E2BBD01133C26A300730DE2 /* CGPSAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSAPIController.h; sourceTree = "<group>"; };
 		4E2BBD02133C26A300730DE2 /* CGPSAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSAPIController.m; sourceTree = "<group>"; };
-		4E3022D613476D2500C73BA3 /* CHCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCommon.h; sourceTree = "<group>"; };
-		4E3022D713476D2500C73BA3 /* CHCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CHCommon.xcodeproj; sourceTree = "<group>"; };
-		4E3022DB13476D2500C73BA3 /* CHExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHExtensions.h; sourceTree = "<group>"; };
-		4E3022DD13476D2500C73BA3 /* NSArray+Each.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Each.h"; sourceTree = "<group>"; };
-		4E3022DE13476D2500C73BA3 /* NSArray+Each.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Each.m"; sourceTree = "<group>"; };
-		4E3022E013476D2500C73BA3 /* NSDictionary+Each.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Each.h"; sourceTree = "<group>"; };
-		4E3022E113476D2500C73BA3 /* NSDictionary+Each.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Each.m"; sourceTree = "<group>"; };
-		4E3022E313476D2500C73BA3 /* NSObject+Say.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Say.h"; sourceTree = "<group>"; };
-		4E3022E413476D2500C73BA3 /* NSObject+Say.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Say.m"; sourceTree = "<group>"; };
-		4E3022E613476D2500C73BA3 /* CHMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMacros.h; sourceTree = "<group>"; };
-		4E3022E713476D2500C73BA3 /* CHSingletonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSingletonMacro.h; sourceTree = "<group>"; };
 		4EA28FDD133D024600E82A5E /* CGPSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPSLocation.h; sourceTree = "<group>"; };
 		4EA28FDE133D024600E82A5E /* CGPSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPSLocation.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampusGPS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampusGPS-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -216,7 +218,7 @@
 		4E0C5F4F13424358002A010B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4E30229213476D2500C73BA3 /* Cocoahero-Common-Library */,
+				4E1DFFF21361CD7A009B20BF /* ios-common-library */,
 				4E0C5FD313424393002A010B /* ASI-HTTP-Request */,
 				4E0C5F901342437F002A010B /* JSONKit */,
 			);
@@ -305,6 +307,49 @@
 			name = "New Location View";
 			sourceTree = "<group>";
 		};
+		4E1D00751361CD7B009B20BF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4E1D00761361CD7B009B20BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E1D00771361CD7B009B20BF /* CHExtensions.h */,
+				4E1D00781361CD7B009B20BF /* NSArray+Each.h */,
+				4E1D00791361CD7B009B20BF /* NSArray+Each.m */,
+				4E1D007A1361CD7B009B20BF /* NSDictionary+Each.h */,
+				4E1D007B1361CD7B009B20BF /* NSDictionary+Each.m */,
+				4E1D007C1361CD7B009B20BF /* NSObject+Say.h */,
+				4E1D007D1361CD7B009B20BF /* NSObject+Say.m */,
+				4E1D007E1361CD7B009B20BF /* UIColor+Hex.h */,
+				4E1D007F1361CD7B009B20BF /* UIColor+Hex.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E1D00801361CD7B009B20BF /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				4E1D00811361CD7B009B20BF /* CHMacros.h */,
+				4E1D00821361CD7B009B20BF /* CHSingletonMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		4E1DFFF21361CD7A009B20BF /* ios-common-library */ = {
+			isa = PBXGroup;
+			children = (
+				4E1D00711361CD7B009B20BF /* CHCommon.h */,
+				4E1D00751361CD7B009B20BF /* Classes */,
+				4E1D00761361CD7B009B20BF /* Extensions */,
+				4E1D00801361CD7B009B20BF /* Macros */,
+			);
+			path = "ios-common-library";
+			sourceTree = "<group>";
+		};
 		4E2BBABF133BDBA100730DE2 /* Application Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,72 +423,6 @@
 			name = "API Interface";
 			sourceTree = "<group>";
 		};
-		4E30229213476D2500C73BA3 /* Cocoahero-Common-Library */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022D613476D2500C73BA3 /* CHCommon.h */,
-				4E3022D713476D2500C73BA3 /* CHCommon.xcodeproj */,
-				4E3022DA13476D2500C73BA3 /* Extensions */,
-				4E3022E513476D2500C73BA3 /* Macros */,
-			);
-			name = "Cocoahero-Common-Library";
-			path = "../Cocoahero-Common-Library";
-			sourceTree = SOURCE_ROOT;
-		};
-		4E3022D813476D2500C73BA3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4E3022DA13476D2500C73BA3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022DB13476D2500C73BA3 /* CHExtensions.h */,
-				4E3022DC13476D2500C73BA3 /* NSArray */,
-				4E3022DF13476D2500C73BA3 /* NSDictionary */,
-				4E3022E213476D2500C73BA3 /* NSObject */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4E3022DC13476D2500C73BA3 /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022DD13476D2500C73BA3 /* NSArray+Each.h */,
-				4E3022DE13476D2500C73BA3 /* NSArray+Each.m */,
-			);
-			path = NSArray;
-			sourceTree = "<group>";
-		};
-		4E3022DF13476D2500C73BA3 /* NSDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022E013476D2500C73BA3 /* NSDictionary+Each.h */,
-				4E3022E113476D2500C73BA3 /* NSDictionary+Each.m */,
-			);
-			path = NSDictionary;
-			sourceTree = "<group>";
-		};
-		4E3022E213476D2500C73BA3 /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022E313476D2500C73BA3 /* NSObject+Say.h */,
-				4E3022E413476D2500C73BA3 /* NSObject+Say.m */,
-			);
-			path = NSObject;
-			sourceTree = "<group>";
-		};
-		4E3022E513476D2500C73BA3 /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				4E3022E613476D2500C73BA3 /* CHMacros.h */,
-				4E3022E713476D2500C73BA3 /* CHSingletonMacro.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,12 +463,6 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4E3022D813476D2500C73BA3 /* Products */;
-					ProjectRef = 4E3022D713476D2500C73BA3 /* CHCommon.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* CampusGPS */,
@@ -539,9 +512,10 @@
 				4E0C60B713424393002A010B /* ASIInputStream.m in Sources */,
 				4E0C60B813424393002A010B /* ASINetworkQueue.m in Sources */,
 				4E0C60D813424393002A010B /* Reachability.m in Sources */,
-				4E30231313476D2500C73BA3 /* NSArray+Each.m in Sources */,
-				4E30231413476D2500C73BA3 /* NSDictionary+Each.m in Sources */,
-				4E30231513476D2500C73BA3 /* NSObject+Say.m in Sources */,
+				4E1D00C81361CD7B009B20BF /* NSArray+Each.m in Sources */,
+				4E1D00C91361CD7B009B20BF /* NSDictionary+Each.m in Sources */,
+				4E1D00CA1361CD7B009B20BF /* NSObject+Say.m in Sources */,
+				4E1D00CB1361CD7B009B20BF /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,14 +532,16 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
+					"-ObjC",
 				);
 				PRODUCT_NAME = CampusGPS;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SEPARATE_STRIP = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -577,14 +553,16 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampusGPS_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "CampusGPS-Info.plist";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
+					"-ObjC",
 				);
 				PRODUCT_NAME = CampusGPS;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SEPARATE_STRIP = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

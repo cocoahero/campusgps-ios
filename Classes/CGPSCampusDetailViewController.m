@@ -15,6 +15,7 @@
 @synthesize mapViewButton = _mapViewButton;
 
 @synthesize campusNameLabel = _campusNameLabel;
+@synthesize campusLocationLabel = _campusLocationLabel;
 @synthesize campusDescriptionTextView = _campusDescriptionTextView;
 
 @synthesize campus = _campus;
@@ -37,6 +38,7 @@
 	[self setTitle:@"Campus Info"];
 	[[self navigationItem] setRightBarButtonItem:[self mapViewButton]];
 	[[self campusNameLabel] setText:[[self campus] campusName]];
+	[[self campusLocationLabel] setText:[[self campus] campusLocation]];
 	[[self campusDescriptionTextView] setText:[[self campus] campusDescription]];
 }
 
@@ -64,6 +66,7 @@
 - (void)dealloc {
 	[_mapViewButton release];
 	[_campusNameLabel release];
+	[_campusLocationLabel release];
 	[_campusDescriptionTextView release];
 	[_campus release];
 	

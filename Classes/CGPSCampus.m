@@ -14,6 +14,8 @@
 
 @synthesize campusID;
 @synthesize campusName;
+@synthesize campusLocation;
+@synthesize campusWebsite;
 @synthesize campusDescription;
 
 #pragma mark - CGPSCampus Factory Methods
@@ -33,6 +35,8 @@
 		if (dictionary != nil) {
 			self.campusID = [dictionary objectForKey:@"id"];
 			self.campusName = [dictionary objectForKey:@"name"];
+			self.campusLocation = [dictionary objectForKey:@"location"];
+			self.campusWebsite = [dictionary objectForKey:@"website"];
 			self.campusDescription = [dictionary objectForKey:@"description"];
 		}
 	}
